@@ -1,5 +1,4 @@
-# Mage2 Module ChrisMallory PromoBanner
-
+# ChrisMallory_PromoBanner
 ```chrismallory/module-promobanner```
 
 ## Description
