@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <css src="ChrisMallory_PromoBanner::css/custom.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+		<referenceBlock name="header.container">
+            <block name="promo.banner" template="ChrisMallory_PromoBanner::header/promo_banner.phtml">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">ChrisMallory\PromoBanner\ViewModel\Header\PromoBanner</argument>
+                </arguments>
+            </block>
+		</referenceBlock>
+	</body>
+</page>

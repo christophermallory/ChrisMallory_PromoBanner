@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="header" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Header</label>
+			<tab>general</tab>
+			<resource>ChrisMallory_PromoBanner::config</resource>
+			<group id="promo_banner" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Promotional Banner</label>
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="message" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Banner Message</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+				</field>
+                <field id="link" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Banner Link</label>
+                    <comment>When the banner is clicked the user will be directed to this page.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+                <field id="custom_styles" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="15" translate="label" type="select">
+                    <label>Use Custom Styles</label>
+                    <comment>If you'd like to pick your own colors and font styles select yes. The default background is red, text color is white, and font size is 16px with a weight of 600.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+                <field id="background" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Background</label>
+                    <frontend_model>ChrisMallory\PromoBanner\Block\ColorPicker</frontend_model>
+                    <comment>You can use the color picker that shows when clicking this field or you can add any style that is valid for the CSS background property. Defaults to red.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="custom_styles">1</field>
+                    </depends>
+                </field>
+                <field id="font_size" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Font Size</label>
+                    <comment>Add any style that is valid for the CSS font-size property. Defaults to 16px.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="custom_styles">1</field>
+                    </depends>
+                </field>
+                <field id="font_color" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Font Color</label>
+                    <frontend_model>ChrisMallory\PromoBanner\Block\ColorPicker</frontend_model>
+                    <comment>You can use the color picker that shows when clicking this field or you can add any style that is valid for the CSS color property. Defaults to white.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="custom_styles">1</field>
+                    </depends>
+                </field>
+                <field id="font_weight" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Font Weight</label>
+                    <comment>Add any style that is valid for the CSS font-weight property. Defaults to 600.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="custom_styles">1</field>
+                    </depends>
+                </field>
+			</group>
+		</section>
+	</system>
+</config>

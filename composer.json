@@ -1,0 +1,22 @@
+{
+    "name": "chrismallory/module-promobanner",
+    "description": "Display a global promotional message throughout your website",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "chris@christophermallory.com",
+            "name": "Chris Mallory"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ChrisMallory\\PromoBanner\\": ""
+        }
+    }
+}

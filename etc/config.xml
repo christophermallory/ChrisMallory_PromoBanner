@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<header>
+			<promo_banner>
+                <enable>0</enable>
+                <custom_styles>0</custom_styles>
+                <background>#e22626</background>
+                <color>#ffffff</color>
+                <font_size>16px</font_size>
+                <font_weight>600</font_weight>
+			</promo_banner>
+		</header>
+	</default>
+</config>

@@ -1,0 +1,44 @@
+<?php
+
+use ChrisMallory\PromoBanner\ViewModel\Header\PromoBanner;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var PromoBanner $viewModel */
+$viewModel = $block->getData('viewModel');
+$promoLink = $viewModel->getPromoLink();
+?>
+<?php if ($viewModel->isEnabled()) : ?>
+<?php if ($viewModel->getUseCustomStyles()) : ?>
+<?php $customStyles = $viewModel->getCustomStyles() ?>
+<style>
+    <?php if ($customStyles['background']) : ?>
+    div.promo-banner-wrapper { background: <?= $customStyles['background'] ?> }
+    <?php endif; ?>
+    <?php if ($customStyles['font_size'] || $customStyles['font_weight'] || $customStyles['color']) : ?>
+    div.promo-banner-wrapper div.promo-banner-message {
+        <?php if ($customStyles['color']) : ?>
+        color: <?= $customStyles['color'] ?>;
+        <?php endif; ?>
+        <?php if ($customStyles['font_size']) : ?>
+        font-size: <?= $customStyles['font-size'] ?>;
+        <?php endif; ?>
+        <?php if ($customStyles['font_weight']) : ?>
+        font-weight: <?= $customStyles['font_weight'] ?>;
+        <?php endif; ?>
+    }
+    <?php endif; ?>
+</style>
+<?php endif; ?>
+<div class="promo-banner-wrapper">
+    <div class="promo-banner-message">
+        <?php if ($promoLink) : ?>
+        <a href="<?= $promoLink ?>">
+        <?php endif; ?>
+        <span><?= $viewModel->getPromoText() ?></span>
+        <?php if ($promoLink) : ?>
+        </a>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif ?>
