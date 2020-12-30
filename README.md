@@ -2,7 +2,7 @@
 ```chrismallory/module-promobanner```
 
 ## Description
-This module adds the ability to display a simple promotional banner throughout your website. It also includes the ability to customize the styles of the promotional banner.
+This Magento 2 module adds the ability to display a simple promotional banner throughout your website. It also includes the ability to customize the styles of the promotional banner.
 
 ### Screenshots
 #### Mobile
