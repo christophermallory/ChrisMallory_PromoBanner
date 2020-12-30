@@ -33,11 +33,11 @@ To access this module's configuration, navigate to `Stores > Settings > Configur
 
 In the configuration menu click on Header under the General tab.
 
-![](https://i.postimg.cc/1Xxf1LXN/Screen-Shot-2020-12-30-at-10-08-09-AM.png)
+![General Tab Header Section](https://i.postimg.cc/1Xxf1LXN/Screen-Shot-2020-12-30-at-10-08-09-AM.png)
 
 The Promotional Banner settings will now be displayed. Make your desired changes then click save.
 
-![](https://i.postimg.cc/63p8hdSy/Screen-Shot-2020-12-30-at-10-00-28-AM.png)
+![Promotional Banner Settings](https://i.postimg.cc/63p8hdSy/Screen-Shot-2020-12-30-at-10-00-28-AM.png)
 
 ### Settings Explanation
 
@@ -83,7 +83,7 @@ This module has been tested and validated to work on Magento versions 2.3 and hi
 This module uses a ViewModel and should be compatible with versions 2.2 and higher but has not been tested on versions lower than 2.3.
 
 ## Bugs & Issues
-If you find a bug or issue please create a new issue here and include as much detail and context as possible including screenshots.
+If you find a bug or issue please create a new issue [here](https://github.com/christophermallory/ChrisMallory_PromoBanner/issues) and include as much detail and context as possible including screenshots.
 
 ## License
 This module is licensed under the Open Software License V3.0 which you can refer to [here](LICENSE.txt).
