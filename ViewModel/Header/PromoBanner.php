@@ -28,7 +28,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      */
     public function __construct(
         ScopeConfigInterface $scopeConfig
-    ){
+    ) {
         $this->scopeConfig = $scopeConfig;
         parent::__construct();
     }
@@ -37,7 +37,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      * Returns true if promotional banner is enabled
      * @return bool
      */
-    public function isEnabled()
+    public function isEnabled(): bool
     {
         return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'enable');
     }
@@ -46,7 +46,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      * Returns promotional banner text
      * @return string
      */
-    public function getPromoText()
+    public function getPromoText(): string
     {
         return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'message');
     }
@@ -55,7 +55,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      * Returns promotional banner link
      * @return string
      */
-    public function getPromoLink()
+    public function getPromoLink(): string
     {
         return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'link');
     }
@@ -64,16 +64,17 @@ class PromoBanner extends DataObject implements ArgumentInterface
      * Returns true if promotional banner is configured to use custom CSS styles
      * @return bool
      */
-    public function getUseCustomStyles() {
+    public function getUseCustomStyles(): bool
+    {
         return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'custom_styles');
     }
-
 
     /**
      * Returns array of CSS styles
      * @return array
      */
-    public function getCustomStyles() {
+    public function getCustomStyles(): array
+    {
         $customStyles = [
             'background' => false,
             'font_size' => false,
@@ -100,4 +101,3 @@ class PromoBanner extends DataObject implements ArgumentInterface
         return $customStyles;
     }
 }
-
