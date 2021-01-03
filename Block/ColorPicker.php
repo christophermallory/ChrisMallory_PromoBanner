@@ -9,6 +9,8 @@ use Magento\Framework\Data\Form\Element\AbstractElement;
 class ColorPicker extends Field
 {
     /**
+     * ColorPicker constructor
+     *
      * @param Context $context
      * @param array $data
      */
