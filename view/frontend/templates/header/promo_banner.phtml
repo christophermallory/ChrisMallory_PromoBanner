@@ -17,14 +17,14 @@ $promoLink = $viewModel->getPromoLink();
     <?php endif; ?>
     <?php if ($customStyles['font_size'] || $customStyles['font_weight'] || $customStyles['color']) : ?>
     div.promo-banner-wrapper div.promo-banner-message {
-        <?php if ($customStyles['color']) : ?>
-        color: <?= $customStyles['color'] ?>;
+        <?php if ($color = $customStyles['color']) : ?>
+        color: <?= $color ?>;
         <?php endif; ?>
-        <?php if ($customStyles['font_size']) : ?>
-        font-size: <?= $customStyles['font-size'] ?>;
+        <?php if ($fontSize = $customStyles['font_size']) : ?>
+        font-size: <?= $fontSize ?>;
         <?php endif; ?>
-        <?php if ($customStyles['font_weight']) : ?>
-        font-weight: <?= $customStyles['font_weight'] ?>;
+        <?php if ($fontWeight = $customStyles['font_weight']) : ?>
+        font-weight: <?= $fontWeight ?>;
         <?php endif; ?>
     }
     <?php endif; ?>
