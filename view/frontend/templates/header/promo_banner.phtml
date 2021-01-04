@@ -18,7 +18,7 @@ $promoLink = $viewModel->getPromoLink();
         <?php if ($customStyles['font_size'] || $customStyles['font_weight'] || $customStyles['color']): ?>
         div.promo-banner-wrapper div.promo-banner-message {
             <?php if ($color = $block->escapeCss($customStyles['color'])): ?>
-            color: <?= $color ?>;
+            color: <?= $block->escapeCss($color) ?>;
             <?php endif; ?>
             <?php if ($fontSize = $customStyles['font_size']): ?>
             font-size: <?= $block->escapeCss($fontSize) ?>;
@@ -33,9 +33,9 @@ $promoLink = $viewModel->getPromoLink();
     <div class="promo-banner-wrapper">
         <div class="promo-banner-message">
             <?php if ($promoLink): ?>
-            <a href="<?= $promoLink ?>">
+            <a href="<?= $block->escapeUrl($promoLink) ?>">
             <?php endif; ?>
-            <span><?= $viewModel->getPromoText() ?></span>
+            <span><?= $block->escapeHtml($viewModel->getPromoText()) ?></span>
             <?php if ($promoLink): ?>
             </a>
             <?php endif; ?>
