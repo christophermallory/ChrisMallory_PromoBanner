@@ -13,18 +13,18 @@ $promoLink = $viewModel->getPromoLink();
         <?php $customStyles = $viewModel->getCustomStyles() ?>
         <style>
         <?php if ($customStyles['background']): ?>
-        div.promo-banner-wrapper { background: <?= $customStyles['background'] ?> }
+        div.promo-banner-wrapper { background: <?= $block->escapeCss($customStyles['background']) ?> }
         <?php endif; ?>
         <?php if ($customStyles['font_size'] || $customStyles['font_weight'] || $customStyles['color']): ?>
         div.promo-banner-wrapper div.promo-banner-message {
-            <?php if ($color = $customStyles['color']): ?>
+            <?php if ($color = $block->escapeCss($customStyles['color'])): ?>
             color: <?= $color ?>;
             <?php endif; ?>
             <?php if ($fontSize = $customStyles['font_size']): ?>
-            font-size: <?= $fontSize ?>;
+            font-size: <?= $block->escapeCss($fontSize) ?>;
             <?php endif; ?>
             <?php if ($fontWeight = $customStyles['font_weight']): ?>
-            font-weight: <?= $fontWeight ?>;
+            font-weight: <?= $block->escapeCss($fontWeight) ?>;
             <?php endif; ?>
         }
         <?php endif; ?>
@@ -32,11 +32,11 @@ $promoLink = $viewModel->getPromoLink();
     <?php endif; ?>
     <div class="promo-banner-wrapper">
         <div class="promo-banner-message">
-            <?php if ($promoLink) : ?>
+            <?php if ($promoLink): ?>
             <a href="<?= $promoLink ?>">
             <?php endif; ?>
             <span><?= $viewModel->getPromoText() ?></span>
-            <?php if ($promoLink) : ?>
+            <?php if ($promoLink): ?>
             </a>
             <?php endif; ?>
         </div>
