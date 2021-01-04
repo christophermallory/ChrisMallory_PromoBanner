@@ -9,7 +9,7 @@ $viewModel = $block->getData('viewModel');
 $promoLink = $viewModel->getPromoLink();
 ?>
 <?php if ($viewModel->isEnabled()) : ?>
-<?php if ($viewModel->getUseCustomStyles()) : ?>
+<?php if ($viewModel->isUseCustomStyles()) : ?>
 <?php $customStyles = $viewModel->getCustomStyles() ?>
 <style>
     <?php if ($customStyles['background']) : ?>

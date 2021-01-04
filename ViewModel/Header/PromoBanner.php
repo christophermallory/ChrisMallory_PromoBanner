@@ -64,7 +64,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      * Returns true if promotional banner is configured to use custom CSS styles
      * @return bool
      */
-    public function getUseCustomStyles(): bool
+    public function isUseCustomStyles(): bool
     {
         return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'custom_styles');
     }
