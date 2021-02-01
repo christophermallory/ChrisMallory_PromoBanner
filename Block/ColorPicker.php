@@ -14,7 +14,7 @@ class ColorPicker extends Field
      * @param  AbstractElement $element
      * @return string
      */
-    protected function _getElementHtml(AbstractElement $element)
+    protected function _getElementHtml(AbstractElement $element): string
     {
         $html = $element->getElementHtml();
         $value = $element->getData('value');

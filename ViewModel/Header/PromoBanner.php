@@ -39,7 +39,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      */
     public function isEnabled(): bool
     {
-        return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'enable');
+        return (bool)$this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'enable');
     }
 
     /**
