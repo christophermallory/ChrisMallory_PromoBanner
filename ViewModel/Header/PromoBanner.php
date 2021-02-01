@@ -66,7 +66,7 @@ class PromoBanner extends DataObject implements ArgumentInterface
      */
     public function isUseCustomStyles(): bool
     {
-        return $this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'custom_styles');
+        return (bool)$this->scopeConfig->getValue(self::PROMO_BANNER_XML_CONFIG_PATH . 'custom_styles');
     }
 
     /**
